@@ -1,0 +1,9 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "launch_ts",
+        "command": "tsc", // Could be any other shell command
+        "args": ["-w", "-p", "."],
+        "type": "shell"
+    }]
+}
