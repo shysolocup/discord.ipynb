@@ -1,1 +1,3 @@
-console.log("Hello World");
+import { enums } from "./enums";
+
+console.log(enums.cellType.markdown);
