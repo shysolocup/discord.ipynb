@@ -1,13 +1,16 @@
 "use strict";
-class Enum {
-    constructor(enumname, name, value) {
-        this.name = name;
-        this.value = value;
-        this.enumname = enumname;
-        return Object.freeze(this);
+class CellType {
+    constructor() {
+        this.Markdown = [0];
+        this.Script = [1];
     }
 }
-Enums.Enum = Enum;
+class EnumsBase {
+    constructor() {
+        this.CellType = new CellType();
+    }
+}
+const Enums = Object.freeze(new EnumsBase());
 module.exports = {
     Enums: Enums,
 };

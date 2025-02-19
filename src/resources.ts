@@ -1,80 +1,21 @@
-type EnumItem = {
-    name : string;
-    enums : { [key : string]: EnumValue };
-}
-
-class EnumItemBase {
-    name : string;
-    enums : { [key : string]: EnumValue } = {};
-    
-    constructor(name : string) {
-        this.name = name;
-
-        return this;
-    }
-}
-
-type EnumValue = {
-    name : string,
-    value : number,
-    parent : EnumItem
+type Enum = {
+    [index : number]: number
 }
 
 
-class EnumValueBase {
-    name : string;
-    value : number;
-    parent : EnumItem;
-
-    constructor(name : string, value : number, parent : EnumItem) {
-        this.name = name;
-        this.value = value;
-        this.parent = parent;
-    }
+class CellType {
+    readonly Markdown: Enum = [0];
+    readonly Script: Enum = [1];
 }
-
-/*
-
-new EnumList({
-    CellType: [
-        "Markdown",
-        "Python"
-    ]
-})
-
-*/
-
 
 class EnumsBase {
-    enums: { [key : string] : EnumItem } = {};
-
-    constructor( enums : { [key: string] : string[] } ) {
-        for (let [key, value] of Object.entries(enums)) {
-            enums[key] = new EnumItemBase(key) as EnumItem;
-
-            value.forEach( (v, i) => {
-                
-            })
-        }
-
-        return Object.freeze(this);
-    }
+    readonly CellType : CellType = new CellType()
 }
 
 
-const Enums = Object.freeze(
-    new Proxy(
-        new EnumsBase({
+const Enums = Object.freeze(new EnumsBase())
 
-        }),
-
-        {
-
-        }
-    )
-);
 
 module.exports = { 
     Enums: Enums,  
-
 };

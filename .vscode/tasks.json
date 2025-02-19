@@ -1,9 +1,17 @@
 {
     "version": "2.0.0",
-    "tasks": [{
-        "label": "launch_ts",
-        "command": "tsc", // Could be any other shell command
-        "args": ["-w", "-p", "."],
-        "type": "shell"
-    }]
+    "tasks": [
+        {
+            "command": "tsc -p .",
+            "type": "shell",
+            "label": "compile_ts"
+        },
+
+        {
+            "command": "node ${cwd}/src/index.js",
+            "label": "launch_js",
+            "type": "shell",
+            "dependsOn": [ "compile_ts" ]
+        }
+    ]
 }
