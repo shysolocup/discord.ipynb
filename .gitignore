@@ -1,5 +1,10 @@
+# juno overwatch's notebook stuff
 notebooks/data
 notebooks/cifar_net.pth
 .ipynb_checkpoints/
+
+# install the modules yourself I don't want the github having like 200 files just for modules
 node_modules
-/*.js
+
+# to stop compiled js files from ts from doubling the fuckin file count
+*.js
