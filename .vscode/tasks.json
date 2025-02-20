@@ -1,17 +1,19 @@
 {
     "version": "2.0.0",
     "tasks": [
+
         {
-            "command": "tsc -p .",
+            "command": "tsc --project ${cwd}/discord.ipynb",
             "type": "shell",
-            "label": "compile_ts"
+            "label": "compile_ts",
+            "dependsOn": [ "cd" ]
         },
 
         {
-            "command": "node ${cwd}/src/index.js",
+            "command": "node ${cwd}/discord.ipynb/build/main.js",
             "label": "launch_js",
             "type": "shell",
-            "dependsOn": [ "compile_ts" ]
+            "dependsOn": [ "cd", "compile_ts" ]
         }
     ]
 }
