@@ -8,3 +8,17 @@ node_modules
 
 # to stop compiled js files from ts from doubling the fuckin file count
 *.js
+
+# and no taking my login info
+**/mainuser.json
+
+# files
+.vscode
+.env
+.env.local
+package-lock.json
+yarn.lock
+
+# folders
+build
+node_modules
