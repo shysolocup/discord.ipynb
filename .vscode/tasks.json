@@ -5,15 +5,14 @@
         {
             "command": "tsc --project ${cwd}/discord.ipynb",
             "type": "shell",
-            "label": "compile_ts",
-            "dependsOn": [ "cd" ]
+            "label": "compile_ts"
         },
 
         {
             "command": "node ${cwd}/discord.ipynb/build/main.js",
             "label": "launch_js",
             "type": "shell",
-            "dependsOn": [ "cd", "compile_ts" ]
+            "dependsOn": [ "compile_ts" ]
         }
     ]
 }

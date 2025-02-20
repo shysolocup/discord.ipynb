@@ -5,6 +5,7 @@
     "outDir": "build",
     "rootDir": "src",
     "strict": true,
+    "lib": ["es2021", "dom"],
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
 
