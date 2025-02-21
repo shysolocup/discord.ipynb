@@ -12,16 +12,16 @@ import fetch from 'node-fetch';
 
 
 export const client = new Client({
-  intents: [
-    IntentsBitField.Flags.Guilds,
-    IntentsBitField.Flags.GuildMembers,
-    IntentsBitField.Flags.GuildMessages,
-    IntentsBitField.Flags.GuildMessageReactions,
-    IntentsBitField.Flags.GuildVoiceStates,
-    IntentsBitField.Flags.MessageContent,
-  ],
+intents: [
+  IntentsBitField.Flags.Guilds,
+  IntentsBitField.Flags.GuildMembers,
+  IntentsBitField.Flags.GuildMessages,
+  IntentsBitField.Flags.GuildMessageReactions,
+  IntentsBitField.Flags.GuildVoiceStates,
+  IntentsBitField.Flags.MessageContent,
+],
 
-  silent: false,
+silent: false,
 });
 
 
@@ -53,19 +53,21 @@ users.forEach( async (file) => {
 
     if (!info.active) return;
 
+    let guh = await fetch('https://discord.com/api/v10/auth/login');
+    
     if ((!info.token || info.token.trim().length == 0) && (info.email && info.email.trim().length > 0) && (info.password && info.password.trim().length > 0)) {
-      let res = await fetch("https://discord.com/api/v8/auth/login", {
+      let res = await fetch("https://discord.com/api/v10/auth/login", {
         method: 'post',
 
         headers: {
-          'Content-Type': "application/json", 
-          'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          'content-type': "application/json", 
+          'user-agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
         },
 
         body: JSON.stringify({
           'email': info.email.trim(), 
           'password': info.password.trim(), 
-          'undelete': "false"
+          'undelete': false
         })
       });
 

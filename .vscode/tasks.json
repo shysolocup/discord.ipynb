@@ -9,8 +9,8 @@
         },
 
         {
-            "command": "node ${cwd}/discord.ipynb/build/main.js",
-            "label": "launch_js",
+            "command": "node ${cwd}/discord.ipynb/build/index.js",
+            "label": "launch",
             "type": "shell",
             "dependsOn": [ "compile_ts" ]
         }
