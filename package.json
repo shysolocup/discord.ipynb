@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "@types/react-dom": "^19.0.4"
-  },
   "devDependencies": {
     "typescript": "^5.8.2"
   }

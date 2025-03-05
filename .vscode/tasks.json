@@ -1,24 +1,17 @@
 {
     "version": "2.0.0",
     "tasks": [
-
         {
-            "command": "rm -rf ${cwd}/discord.ipynb/build/*",
-            "type": "shell",
-            "label": "clear_build"
-        },
-
-        {
-            "command": "tsc --project ${cwd}/discord.ipynb",
+            "command": "npx tsc -p ${cwd}${pathSeparator}discord.ipynb${pathSeparator}",
             "type": "shell",
             "label": "compile_ts"
         },
 
         {
-            "command": "node ${cwd}/discord.ipynb/build/index.js",
+            "command": "node ${cwd}${pathSeparator}discord.ipynb${pathSeparator}build/index.js",
             "label": "launch",
             "type": "shell",
-            "dependsOn": [ "clear_build", "compile_ts" ]
+            "dependsOn": [ "compile_ts" ]
         }
     ]
 }
