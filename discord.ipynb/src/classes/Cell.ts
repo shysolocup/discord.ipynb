@@ -3,8 +3,12 @@ import * as path from 'path';
 
 import { appPath, read } from '../index.js';
 
+export enum cellType {
+    markdown = "markdown"
+}
+
 export type CellConstructor = {
-    cell_type: cellType
+    cell_type: string
     metadata?: {}
     source?: { [key: number]: string }
 }
@@ -21,7 +25,7 @@ export function writeCell(data : CellConstructor, index? : number) {
 
 export function init(celldata : CellConstructor) {
     let base : CellConstructor = {
-        cell_type: cellType.markdown,
+        cell_type: "markdown",
         metadata: {},
         source: []
     }
@@ -31,8 +35,4 @@ export function init(celldata : CellConstructor) {
     writeCell(base);
 
     return base;
-}
-
-export enum cellType {
-    markdown = "markdown"
 }

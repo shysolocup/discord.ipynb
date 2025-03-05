@@ -14,16 +14,24 @@ export function read() {
 }
 
 import * as cell from './classes/Cell.js'
+import * as image from './classes/Image.js';
+import * as div from './classes/Div.js';
 
 fs.writeFileSync(appPath, fs.readFileSync(path.join("discord.ipynb", './src/base.ipynb')).toString());
 
-/*let newCell = cell.init({
+let newCell = cell.init({
   cell_type: cell.cellType.markdown,
   source: [
     "a",
-    "b"
+    "b",
+    image.init({
+      src: "https://blog.pinwheel.com/hubfs/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png",
+      size: 50,
+      div: true,
+      align: div.alignment.center
+    }),
+    "c"
   ]
 })
 
 console.log(newCell);
-*/
