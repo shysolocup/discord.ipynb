@@ -3,6 +3,12 @@
     "tasks": [
 
         {
+            "command": "rm -rf ${cwd}/discord.ipynb/build/*",
+            "type": "shell",
+            "label": "clear_build"
+        },
+
+        {
             "command": "tsc --project ${cwd}/discord.ipynb",
             "type": "shell",
             "label": "compile_ts"
@@ -12,7 +18,7 @@
             "command": "node ${cwd}/discord.ipynb/build/index.js",
             "label": "launch",
             "type": "shell",
-            "dependsOn": [ "compile_ts" ]
+            "dependsOn": [ "clear_build", "compile_ts" ]
         }
     ]
 }

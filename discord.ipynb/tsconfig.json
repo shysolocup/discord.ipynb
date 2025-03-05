@@ -1,19 +1,22 @@
 {
   "compilerOptions": {
+    "jsx": "react-jsx",
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "Node16",
     "outDir": "build",
     "rootDir": "src",
     "strict": true,
     "lib": ["es2021", "dom"],
-    "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
 
     "experimentalDecorators": true,
     "emitDecoratorMetadata": false,
 
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+
+    "typeRoots": ["./node_modules/@types"]
   },
   "exclude": ["build", "node_modules"]
 }
