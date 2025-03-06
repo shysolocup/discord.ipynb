@@ -8,10 +8,13 @@
     "strict": true,
     "lib": ["es2021", "dom"],
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": false,
+    
 
     "experimentalDecorators": true,
     "emitDecoratorMetadata": false,
 
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,

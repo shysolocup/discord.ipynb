@@ -7,7 +7,7 @@ export enum cellType {
     markdown = "markdown"
 }
 
-export type CellConstructor = {
+export interface CellConstructor {
     cell_type: string
     metadata?: {}
     source?: { [key: number]: string }
