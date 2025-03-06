@@ -1,13 +1,11 @@
-import { accounts, read } from '../../index.js';
+import { accounts, read,  } from '../../index.js';
 
 export async function init() {
     let page = read();
 
     page.cells.forEach( (cell) => {
-        cell.source.forEach( (line) => {
-
-        })
+        if (cell.metadata["id"] == "accounts") {
+            cell.source.addLine("a");
+        }
     });
-
-    console.log(accounts);
 }

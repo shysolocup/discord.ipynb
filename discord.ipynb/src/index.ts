@@ -29,6 +29,10 @@ export function read() {
   return JSON.parse(fs.readFileSync(appPath).toString()) as Notebook;
 }
 
+export function write(filedata : {}) {
+  return fs.writeFileSync(appPath, JSON.stringify(filedata, null, 4));
+}
+
 export async function loadPage(pagepath: string) {
   fs.writeFileSync(appPath, fs.readFileSync(path.join("discord.ipynb", `./src/pages/${pagepath}/index.ipynb`)).toString());
   (await import(`./pages/${pagepath}/index.js`)).init();

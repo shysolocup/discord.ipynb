@@ -1,16 +1,39 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-import { appPath, read } from '../index.js';
+import { appPath, read, write } from '../index.js';
 
 export enum cellType {
     markdown = "markdown"
 }
 
+export class CellSource extends Array {    
+    constructor(source? : string[]) {
+        super();
+        Object.assign(this, source);
+    }
+
+    addLine(text : string, line? : number) {
+        (line) ? this.splice(line, 0, text + "\n") : this.push(text + "\n");
+    }
+
+    static fromString() {
+        
+    }
+}
+
 export interface CellConstructor {
     cell_type: string
-    metadata?: {}
-    source: string[]
+    metadata: {
+        [key: string]: any
+    }
+    source: CellSource
+}
+
+interface CellOptions {
+    cell_type: string
+    metadata?: {},
+    source?: CellSource
 }
 
 export function getCell(index : number) {
@@ -20,14 +43,14 @@ export function getCell(index : number) {
 export function writeCell(data : CellConstructor, index? : number) {
     let filedata = read();
     (index) ? filedata.cells[index] = data : filedata.cells.push(data);
-    fs.writeFileSync(appPath, JSON.stringify(filedata, null, 4));
+    write(filedata);
 }
 
-export function init(celldata : CellConstructor) {
+export function init(celldata : CellOptions) {
     let base : CellConstructor = {
         cell_type: "markdown",
         metadata: {},
-        source: []
+        source: new CellSource
     }
 
     Object.assign(base, celldata);
