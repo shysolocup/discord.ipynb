@@ -6,9 +6,6 @@ notebooks/cifar_net.pth
 # install the modules yourself I don't want the github having like 200 files just for modules
 node_modules
 
-# to stop compiled js files from ts from doubling the fuckin file count
-*.js
-
 # and no taking my login info
 **/mainuser.json
 
