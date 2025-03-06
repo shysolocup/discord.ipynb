@@ -1,7 +1,15 @@
-# GitHub Codespaces ♥️ Jupyter Notebooks
+<img src="https://github.com/shysolocup/discord.ipynb-assets/blob/main/discord.ipynb.png?raw=true" height=100>
 
-Welcome to your shiny new codespace! We've got everything fired up and running for you to explore Python and Jupyter notebooks.
+# **DISCORD.IPYNB**
+Discord.ipynb is a version of the Discord client made in [Jupyter Notebook](https://jupyter.org/) <br>
+it's meant meant to run in codespaces/vscode as a sort of CLI (Commandline Interface) Discord with some ui elements <br>
+- open source
+- modding support
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with what you're seeing right now - where you go from here is up to you!
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+
+### Obligatory Disclaimer
+this project is created out of love for discord development and creativity stuff<br>
+this project and the developers behind it are:
+- not associated with Discord or Discord.JS or Jupyter Notebook
+- not responsible for anything created using it
