@@ -10,7 +10,7 @@ export enum cellType {
 export interface CellConstructor {
     cell_type: string
     metadata?: {}
-    source?: { [key: number]: string }
+    source: string[]
 }
 
 export function getCell(index : number) {

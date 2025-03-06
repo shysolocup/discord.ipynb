@@ -1,6 +1,13 @@
 import { accounts, read } from '../../index.js';
 
 export async function init() {
-    console.log('a')
+    let page = read();
+
+    page.cells.forEach( (cell) => {
+        cell.source.forEach( (line) => {
+
+        })
+    });
+
     console.log(accounts);
 }
