@@ -7,33 +7,18 @@ export enum cellType {
     markdown = "markdown"
 }
 
-export class CellSource extends Array {    
-    constructor(source? : string[]) {
-        super();
-        Object.assign(this, source);
-    }
-
-    addLine(text : string, line? : number) {
-        (line) ? this.splice(line, 0, text + "\n") : this.push(text + "\n");
-    }
-
-    static fromString() {
-        
-    }
-}
-
 export interface CellConstructor {
     cell_type: string
     metadata: {
         [key: string]: any
     }
-    source: CellSource
+    source: { [key: string]: string }
 }
 
 interface CellOptions {
     cell_type: string
     metadata?: {},
-    source?: CellSource
+    source?: { [key: string]: string }
 }
 
 export function getCell(index : number) {
@@ -50,7 +35,7 @@ export function init(celldata : CellOptions) {
     let base : CellConstructor = {
         cell_type: "markdown",
         metadata: {},
-        source: new CellSource
+        source: {}
     }
 
     Object.assign(base, celldata);
