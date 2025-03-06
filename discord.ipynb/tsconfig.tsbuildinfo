@@ -1,1 +1,1 @@
-{"root":["./src/guh.ts","./src/index.ts","./src/classes/cell.ts","./src/classes/div.ts","./src/classes/image.ts","./src/events/common.ts"],"version":"5.8.2"}
+{"root":["./src/guh.ts","./src/index.ts","./src/classes/cell.ts","./src/classes/div.ts","./src/classes/image.ts","./src/events/common.ts","./src/pages/start/index.ts"],"version":"5.8.2"}

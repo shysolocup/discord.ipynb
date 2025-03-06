@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "target": "ESNext",
-    "module": "Node16",
+    "module": "NodeNext",
     "outDir": "build",
     "rootDir": "src",
     "strict": true,
