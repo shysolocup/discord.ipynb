@@ -8,6 +8,3 @@ yarn.lock
 # folders
 build
 node_modules
-
-# app
-/app/discord.ipynb
