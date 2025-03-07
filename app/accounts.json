@@ -1,10 +1,16 @@
 {
     "500714808912642048": {
-        "user": {
-            "id": "500714808912642048",
-            "username": "shysolocup",
-            "active": false
-        },
+        "id": "500714808912642048",
+        "active": false,
+
+        "settings": {
+            
+        }
+    },
+
+    "a": {
+        "id": "a",
+        "active": false,
 
         "settings": {
             

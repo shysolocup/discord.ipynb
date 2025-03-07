@@ -12,13 +12,13 @@ export interface CellConstructor {
     metadata: {
         [key: string]: any
     }
-    source: { [key: string]: string }
+    source: string[]
 }
 
 interface CellOptions {
     cell_type: string
     metadata?: {},
-    source?: { [key: string]: string }
+    source?: string[]
 }
 
 export function getCell(index : number) {
@@ -35,7 +35,7 @@ export function init(celldata : CellOptions) {
     let base : CellConstructor = {
         cell_type: "markdown",
         metadata: {},
-        source: {}
+        source: []
     }
 
     Object.assign(base, celldata);

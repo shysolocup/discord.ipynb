@@ -4,12 +4,8 @@ import * as path from 'path';
 export const appPath = path.join("app", "./discord.ipynb");
 
 export type Account = {
-  user: {
-    id: string,
-    username: string,
-    token: string,
-    active: boolean
-  },
+  id: string,
+  active: boolean,
 
   settings: {
 
