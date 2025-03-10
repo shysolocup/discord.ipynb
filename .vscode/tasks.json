@@ -2,28 +2,22 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "command": "npx tsc -b ${cwd}${pathSeparator}bin${pathSeparator}",
-            "type": "shell",
-            "label": "build_commandline"
-        },
-        
-        {
-            "command": "npm i -g",
-            "type": "shell",
-            "label": "setup_commandline"
-        },
-        
-        {
             "command": "npx tsc -p ${cwd}${pathSeparator}discord.ipynb${pathSeparator}",
             "type": "shell",
             "label": "compile_ts"
         },
 
         {
+            "command": "npm i -g",
+            "type": "shell",
+            "label": "setup_commandline"
+        },
+
+        {
             "command": "node ${cwd}${pathSeparator}discord.ipynb${pathSeparator}build/index.js",
             "label": "launch",
             "type": "shell",
-            "dependsOn": [ "build_commandline", "setup_commandline", "compile_ts" ]
+            "dependsOn": [ "compile_ts", "setup_commandline" ]
         }
     ]
 }
