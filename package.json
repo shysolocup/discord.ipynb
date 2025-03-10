@@ -5,11 +5,11 @@
   "description": "guh",
   "keywords": [],
   "license": "MIT",
-  "main": "bin/index.js",
+  "main": "bin/build/index.js",
 
   "bin": {
-    "ping": "./bin/ping.js",
-    "goto": "./bin/goto.js"
+    "ping": "./bin/build/ping.js",
+    "goto": "./bin/build/goto.js"
   },
 
   "scripts": {
@@ -22,6 +22,7 @@
     "@types/node": "^22.13.9",
     "boxen": "4.0",
     "chalk": "2.4",
-    "yargs": "13.2"
+    "yargs": "13.2",
+    "discord.ipynb": "./discord.ipynb"
   }
 }

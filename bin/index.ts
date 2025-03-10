@@ -1,23 +1,22 @@
 #!/usr/bin/env node
 
-const chalk = require("chalk");
-const boxen = require("boxen");
+import * as chalk from 'chalk';
+import * as boxen from 'boxen';
 
-const greeting = chalk.white.bold("Hello!");
+const greeting = chalk.default.white.bold("Hello!");
 
 const boxenOptions = {
  padding: 1,
  margin: 1,
- borderStyle: "round",
  borderColor: "green",
  backgroundColor: "#555555"
 };
 
-const msgBox = boxen( greeting, boxenOptions );
+const msgBox = boxen.default( greeting, boxenOptions );
 
 console.log(msgBox);
 
-
+/*
 const { execSync } = require('node:child_process');
 
 module.exports = {
@@ -35,3 +34,4 @@ module.exports = {
         });
     }
 }
+*/
