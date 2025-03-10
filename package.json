@@ -1,8 +1,27 @@
 {
+  "name": "discord.ipynb",
+  "author": "shysolocup",
+  "version": "1.0.0",
+  "description": "guh",
+  "keywords": [],
+  "license": "MIT",
+  "main": "bin/index.js",
+
+  "bin": {
+    "ping": "./bin/ping.js",
+    "goto": "./bin/goto.js"
+  },
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@types/node": "^22.13.9"
+    "@types/node": "^22.13.9",
+    "boxen": "4.0",
+    "chalk": "2.4",
+    "yargs": "13.2"
   }
 }

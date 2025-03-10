@@ -1,13 +1,21 @@
 import { accounts, read, write } from '../../index.js';
 import * as Image from '../../classes/Image.js';
 
+// gets account info and creates a table for each one
+
 export async function init() {
     let page = read();
 
     if (Object.keys(accounts).length > 0) {
         page.cells.forEach( (cell) => {
+
+            // checks for the account section of the page's metadata
+
             if (cell.metadata["id"] == "accounts") {
                 cell.source.forEach( (text, line) => {
+
+                    // finds the empty line that's replaced in the page with the accounts
+                    
                     if (text.includes("a little empty around here")) {
 
                         let spliced = [
