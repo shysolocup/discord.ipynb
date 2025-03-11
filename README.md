@@ -1,7 +1,3 @@
-> [!WARNING]
-> This project is still in development and as such you will see very frequent changes and crashes from work-in-progress features.
-
-
 <img src="https://github.com/shysolocup/discord.ipynb-assets/blob/main/discord.ipynb.png?raw=true" height=100>
 
 # **DISCORD.IPYNB**
@@ -16,6 +12,12 @@ Discord.ipynb is a version of the Discord client made in [Jupyter Notebook](http
 it's meant meant to run in codespaces/vscode as a sort of CLI (Commandline Interface) Discord with some ui elements <br>
 - open source
 - modding support
+
+<br>
+
+> [!WARNING]
+> This project is still in development and as such you will see very frequent changes and crashes from work-in-progress features.
+
 
 <br>
 
