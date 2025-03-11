@@ -6,9 +6,6 @@ notebooks/cifar_net.pth
 # install the modules yourself I don't want the github having like 200 files just for modules
 node_modules
 
-# and no taking my login info
-**/mainuser.json
-
 # files
 .vscode
 .env
@@ -21,3 +18,4 @@ build
 node_modules
 
 /app/discord.ipynb
+/app/accounts/*

@@ -46,8 +46,11 @@ export type SessionData = {
 // get accounts and data
 export const accounts: { [ key : string]: Account } = {};
 const accountfolder = fs.readdirSync(path.join("app", "./accounts"));
-import data from '../../app/accounts.json' with { type: "json" };
-Object.assign(accounts, data);
+
+console.log(accountfolder);
+
+// import data from '../../app/accounts.json' with { type: "json" };
+// Object.assign(accounts, data);
 
 export const sessionData: SessionData = {
   userId: "",
