@@ -9,7 +9,8 @@
 <img height=22 src="https://github.com/shysolocup/discord.ipynb/actions/workflows/publish-shit.yml/badge.svg" alt="publish">
 
 
-### NOTE: this is very much a work in progress you may experience some bugs
+> [!WARNING]
+> This project is still heavily in development and as such you will see very frequent changes in the codebase and crashes from unimplemented features.
 
 Discord.ipynb is a version of the Discord client made in [Jupyter Notebook](https://jupyter.org/) <br>
 it's meant meant to run in codespaces/vscode as a sort of CLI (Commandline Interface) Discord with some ui elements <br>
