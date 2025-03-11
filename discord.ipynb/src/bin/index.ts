@@ -1,20 +1,9 @@
 #!/usr/bin/env node
 
-import * as chalk from 'chalk';
-import * as boxen from 'boxen';
+import * as figlet from 'figlet';
 
-const greeting = chalk.default.white.bold("Hello!");
+process.stdout.write(figlet.default.textSync("DISCORD.IPYNB"));
 
-const boxenOptions = {
- padding: 1,
- margin: 1,
- borderColor: "green",
- backgroundColor: "#555555"
-};
-
-const msgBox = boxen.default( greeting, boxenOptions );
-
-console.log(msgBox);
 
 /*
 const { execSync } = require('node:child_process');

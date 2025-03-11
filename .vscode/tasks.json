@@ -4,20 +4,48 @@
         {
             "command": "npx tsc -p ${cwd}${pathSeparator}discord.ipynb${pathSeparator}",
             "type": "shell",
-            "label": "compile_ts"
+            "label": "compile",
+            "presentation": {
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "close": true
+            }
         },
 
         {
             "command": "npm i -g",
             "type": "shell",
-            "label": "setup_commandline"
+            "label": "setup_commandline",
+            "presentation": {
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "close": true
+            }
         },
 
         {
-            "command": "node ${cwd}${pathSeparator}discord.ipynb${pathSeparator}build/index.js",
-            "label": "launch",
+            "command": "node ${cwd}${pathSeparator}discord.ipynb${pathSeparator}build${pathSeparator}index.js",
+            "label": "applogs",
             "type": "shell",
-            "dependsOn": [ "compile_ts", "setup_commandline" ]
+            "presentation": {
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+
+        {
+            "command": "node ${cwd}${pathSeparator}discord.ipynb${pathSeparator}build${pathSeparator}bin${pathSeparator}index.js",
+            "label": "discord.ipynb",
+            "type": "shell",
+            "dependsOn": [ "compile", "setup_commandline", "applogs" ],
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            }
         }
     ]
 }
