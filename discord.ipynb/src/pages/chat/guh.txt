@@ -1,0 +1,54 @@
+<table>
+    <tr><th>
+    
+    [//]: # (profile icon)
+    
+    <img src="https://github.com/shysolocup/discord.ipynb-assets/blob/main/discord.ipynb.png?raw=true" height=35 width=35>
+    
+    </th>
+    
+    [//]: # (username date and message)
+    
+    <td><i><sup>03/11/2025</sup><i><br><b>discord.ipynb</b><br><br></td>
+    <td>Welcome to the chat room!</td>
+    
+    </tr></table><table>
+    
+    [//]: # (message info)
+    
+    <tr><td>
+    <details><summary>🛈</summary><sup><i>msg #2</i><br><i>edited: false<i></sup></details>
+    </td><td>
+    <details><summary>👤</summary>
+    
+    [//]: # (message author)
+    
+    <table>
+    <tr><td>
+    <img src="https://github.com/shysolocup/discord.ipynb-assets/blob/main/discord.ipynb.png?raw=true" height=100 width=100>
+    </td></tr><tr><td><span style="font-size:30px;"><b>discord.ipynb</b></span><br><b><i>@discordipynb • pronouns</i></b></td></tr>
+    <tr><td><sup>
+    
+    > **About Me:**<br>
+    > created by shysolocup<br>this is an example of a description
+    
+    > **Member Since:**<br>
+    > Discord: `Oct 13, 2018`<br>
+    > Server: `Dec 27, 2024`
+    
+    </sup></td></tr>
+    <tr><td><sup>
+    
+    Roles:<br>
+    `Cool`, `Epic`
+    
+    </sup></td></tr>
+    </table>
+    <br>
+    
+    [//]: # (message files)
+    
+    </details>
+    </td><td>
+    <details><summary>📁</summary><br></details>
+    </td></tr></table>
