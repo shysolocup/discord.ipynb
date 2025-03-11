@@ -2,68 +2,30 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "command": "bash -c npx tsc -p ${cwd}${pathSeparator}discord.ipynb${pathSeparator}",
-            "type": "process",
-            "label": "compile",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "presentation": {
-                "echo": true,
-                "reveal": "never",
-                "focus": false,
-                "panel": "shared"
-            }
+            "command": "npx tsc -p ${cwd}${pathSeparator}discord.ipynb${pathSeparator}",
+            "type": "shell",
+            "label": "compile_ts"
         },
 
         {
             "command": "npm i -g",
             "type": "shell",
             "label": "setup_commandline",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "presentation": {
-                "echo": true,
-                "reveal": "never",
-                "focus": false,
-                "panel": "shared"
-            }
+            "dependsOn": [ "compile_ts" ]
         },
 
         {
             "command": "node ${cwd}${pathSeparator}discord.ipynb${pathSeparator}build${pathSeparator}index.js",
             "label": "applogs",
             "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "presentation": {
-                "echo": true,
-                "reveal": "never",
-                "focus": false,
-                "panel": "shared"
-            }
+            "dependsOn": [ "setup_commandline" ]
         },
 
         {
             "command": "node ${cwd}${pathSeparator}discord.ipynb${pathSeparator}build${pathSeparator}bin${pathSeparator}index.js",
             "label": "discord.ipynb",
             "type": "shell",
-            "dependsOn": [ "compile", "setup_commandline", "applogs" ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "presentation": {
-                "echo": true,
-                "reveal": "never",
-                "focus": false,
-                "panel": "shared"
-            }
+            "dependsOn": [ "applogs" ]
         }
     ]
 }

@@ -44,10 +44,12 @@ export type SessionData = {
 }
 
 // get accounts and data
-export const accounts: { [ key : string]: Account } = {};
+export const accounts: Account[] = [];
 const accountfolder = fs.readdirSync(path.join("app", "./accounts"));
 
-console.log(accountfolder);
+accountfolder.forEach( async acc => acc.endsWith(".json") && accounts.push(
+  (await import(`../../app/accounts/${acc}`, { assert: { type: "json" } })).default as Account
+));
 
 // import data from '../../app/accounts.json' with { type: "json" };
 // Object.assign(accounts, data);

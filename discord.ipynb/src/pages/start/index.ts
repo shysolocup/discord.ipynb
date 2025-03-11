@@ -1,4 +1,4 @@
-/*import { accounts, read, write } from '../../index.js';
+import { accounts, read, write } from '../../index.js';
 import * as Image from '../../classes/Image.js';
 
 // gets account info and creates a table for each one
@@ -60,4 +60,3 @@ export async function init() {
         });
     }
 }
-*/
